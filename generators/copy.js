@@ -8,10 +8,10 @@ fs.copyFileSync(path.join('generators', 'componentTemplate.js'), path.join('comp
 console.log('')
 console.log(`${componentName}.js has been created in components/`)
 
-replace(path.join('components', 'DynamicComponent.js'), {
+replace(path.join('pages', '_app.js'), {
   '// this comment line is used by the generator in generators/copy.js': `import ${componentName} from './${componentName}'\n// this comment line is used by the generator in generators/copy.js`,
-  'const Components = {': `const Components = {\n  '${componentName}': ${componentName},`
+  'components: {': `components: {\n  '${componentName}': ${componentName},`
 })
 
-console.log(`${componentName} added to DynamicComponents.js`)
+console.log(`${componentName} added to _app.js`)
 console.log('')

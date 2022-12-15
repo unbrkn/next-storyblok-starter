@@ -1,10 +1,9 @@
 import React from 'react'
-import DynamicComponent from '../components/dynamic-component'
-import {sbEditable} from '../lib/storyblok'
+import {storyblokEditable, StoryblokComponent} from "@storyblok/react";
 
 export default ({blok}) => {
   return (
-    <div {...Editable(blok)}>
+    <div {...storyblokEditable(blok)}>
       This is a component you created with the CLI. Change its code in the components/ folder.
 
       {/*
@@ -17,7 +16,7 @@ export default ({blok}) => {
         Use this code if you want to render a block field:
 
         {blok.YOUR_BLOCK_FIELD.map((blok) =>
-          (<DynamicComponent blok={blok} key={blok._uid}/>)
+          (<StoryblokComponent blok={blok} key={blok._uid}/>)
         )}
       */}
     </div>

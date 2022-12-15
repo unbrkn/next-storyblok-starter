@@ -13,7 +13,7 @@ Read the [Next.js tutorial](https://www.storyblok.com/tp/add-a-headless-cms-to-n
 ### 1. Clone the repo
 
 ```sh
-  $ git clone https://github.com/sahli-interactive/next-storyblok.git
+  $ git clone https://github.com/unbrkn/next-storyblok-starter.git
 ```
 
 ### 2. Install all dependencies
@@ -53,18 +53,18 @@ $ yarn build # or npm run build
 To enable preview mode you have to add two preview URLs in storyblok:
 
 **Preview**
-`https://<my-netlify-or-prod-url>/api/preview?secret=<your-preview-paswsword-or-token>&slug=`
+`https://<my-production-url>/api/preview?secret=<your-preview-paswsword-or-token>&slug=`
 
 **Exit Preview**
-`https://<my-netlify-or-prod-url>/api/exit-preview?slug=`
+`https://<my-production-url>/api/exit-preview?slug=`
 
-Don't forget to add the preview token as env-variable in netlify as well.
+Don't forget to add the preview token as env-variable in production as well.
 It might be helpful for the end user to set the preview URL as default.
 
 ### 6. Webhook for revalidation
 
 To revalidate pages after publishing in Storyblok, you have to setup the following Webhook URL:
-`https://<my-netlify-or-prod-url>/api/story-published?secret=<your-preview-paswsword-or-token>`
+`https://<my-production-url>/api/story-published?secret=<your-preview-paswsword-or-token>`
 
 Don't forger to add the secret-token/password in Netlify as well.
 

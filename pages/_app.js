@@ -4,6 +4,7 @@ import feature from "../components/bloks/feature";
 import teaser from "../components/bloks/teaser";
 import page from "../components/bloks/page";
 import grid from "../components/bloks/grid"
+// this comment line is used by the generator in generators/copy.js
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_TOKEN,
